@@ -1,13 +1,14 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
+using Assert = NUnit.Framework.Assert;
 using Movement;
+
 
 namespace MovingStrategy.Tests
 {
-	[TestClass]
+	[TestFixture]
 	public class MovingStrategyTest
 	{
-		[TestMethod]
+		[Test]
 		public void TestMove_MoveUp_Success()
 		{
 			MovingContext context = new MovingContext();
@@ -17,7 +18,7 @@ namespace MovingStrategy.Tests
 			Assert.IsTrue(moveName.Equals("Basic Up Move"),"Up movement failed");
 		}
 
-		[TestMethod]
+		[Test]
 		public void TestMove_MoveDown_Success()
 		{
 			MovingContext context = new MovingContext();
@@ -27,7 +28,7 @@ namespace MovingStrategy.Tests
 			Assert.IsTrue(moveName.Equals("Basic Down Move"), "Down movement failed");
 		}
 
-		[TestMethod]
+		[Test]
 		public void TestMove_MoveLeft_Success()
 		{
 			MovingContext context = new MovingContext();
@@ -37,7 +38,7 @@ namespace MovingStrategy.Tests
 			Assert.IsTrue(moveName.Equals("Basic Left Move"), "Left movement failed");
 		}
 
-		[TestMethod]
+		[Test]
 		public void TestMove_MoveRight_Success()
 		{
 			MovingContext context = new MovingContext();
@@ -47,7 +48,7 @@ namespace MovingStrategy.Tests
 			Assert.IsTrue(moveName.Equals("Basic Right Move"), "Right movement failed");
 		}
 
-		[TestMethod]
+		[Test]
 		public void TestMove_MoveCombo_Success()
 		{
 			MovingContext context = new MovingContext();
@@ -57,14 +58,10 @@ namespace MovingStrategy.Tests
 			Assert.IsTrue(moveName.Equals("Up Up Down Down Combo Move"), "Combo movement failed");
 		}
 
-		[TestMethod]
-		[ExpectedException(typeof(WrongMovementException))]
+		[Test]
 		public void TestMove_WrongMovement_Success()
 		{
-			MovingContext context = new MovingContext();
-
-			context.SetStrategy(StrategyFactory.GetStrategy("!@$%"));
-			var moveName = context.Move();
+			Assert.Throws<WrongMovementException>(() => StrategyFactory.GetStrategy("!@$%"));
 		}
 	}
 }

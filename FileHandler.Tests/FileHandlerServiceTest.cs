@@ -1,13 +1,12 @@
-﻿using System;
-using FileHandler.Core;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using FileHandler.Core;
+using NUnit.Framework;
 
 namespace FileHandler.Tests
 {
-	[TestClass]
+	[TestFixture]
 	public class FileHandlerServiceTest
 	{
-		[TestMethod]
+		[Test]
 		public void TestSplitDirectoryFile_ForwardSlashInPath_Success()
 		{
 			string directory, fileName;
@@ -17,7 +16,7 @@ namespace FileHandler.Tests
 			Assert.IsTrue(fileName.Equals("file.txt"), "Failed to get file name.");
 		}
 
-		[TestMethod]
+		[Test]
 		public void TestSplitDirectoryFile_MultipleBackSlashInPath_Success()
 		{
 			string directory, fileName;
@@ -27,7 +26,7 @@ namespace FileHandler.Tests
 			Assert.IsTrue(fileName.Equals("file.txt"), "Failed to get file name.");
 		}
 
-		[TestMethod]
+		[Test]
 		public void TestSplitDirectoryFile_FileInRootCDirectory_Success()
 		{
 			string directory, fileName;
@@ -37,7 +36,7 @@ namespace FileHandler.Tests
 			Assert.IsTrue(fileName.Equals("file.txt"), "Failed to get file name.");
 		}
 
-		[TestMethod]
+		[Test]
 		public void TestSplitDirectoryFile_NetworkPath_Success()
 		{
 			string directory, fileName;
