@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileHandler.Core", "FileHan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileHandler.Tests", "FileHandler.Tests\FileHandler.Tests.csproj", "{DCFE2E41-D93D-4F39-9BF6-DC6854F74310}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovingStrategy.Tests", "MovingStrategy.Tests\MovingStrategy.Tests.csproj", "{69FFDC75-995B-464E-95BB-36ED7A4279A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{DCFE2E41-D93D-4F39-9BF6-DC6854F74310}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCFE2E41-D93D-4F39-9BF6-DC6854F74310}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCFE2E41-D93D-4F39-9BF6-DC6854F74310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69FFDC75-995B-464E-95BB-36ED7A4279A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69FFDC75-995B-464E-95BB-36ED7A4279A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69FFDC75-995B-464E-95BB-36ED7A4279A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69FFDC75-995B-464E-95BB-36ED7A4279A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{E0236AB7-99A6-458E-BD0C-967F2349852E} = {625F331C-8E4F-4A06-BE41-BE8D6A86372D}
 		{14E523BF-C7E4-44CC-A98C-79F8C7D25531} = {625F331C-8E4F-4A06-BE41-BE8D6A86372D}
 		{DCFE2E41-D93D-4F39-9BF6-DC6854F74310} = {625F331C-8E4F-4A06-BE41-BE8D6A86372D}
+		{69FFDC75-995B-464E-95BB-36ED7A4279A1} = {55454268-4787-4337-AE7F-C0FB2629A5BA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {87535C81-E70D-42F7-AD86-530066A23F02}

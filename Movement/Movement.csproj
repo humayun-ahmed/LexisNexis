@@ -48,6 +48,8 @@
     <Compile Include="MovingRightStrategy.cs" />
     <Compile Include="MovingUpStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StrategyFactory.cs" />
+    <Compile Include="WrongMovementException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

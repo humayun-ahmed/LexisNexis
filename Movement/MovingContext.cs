@@ -7,14 +7,15 @@ namespace Movement
 	/// </summary>
 	public class MovingContext
 	{
-		private readonly BaseMovingStrategy _strategy;
+		private BaseMovingStrategy _strategy;
 		private readonly List<string> moveList = new List<string>();
+
 
 		/// <summary>
 		/// movement object initialization
 		/// </summary>
 		/// <param name="strategy"></param>
-		public MovingContext(BaseMovingStrategy strategy)
+		public void SetStrategy(BaseMovingStrategy strategy)
 		{
 			_strategy = strategy;
 		}
