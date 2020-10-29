@@ -1,8 +1,8 @@
 ﻿using System.IO;
 
-namespace FileHandler.Client
+namespace FileHandler.Core
 {
-	public static class FileHandler
+	public static class FileHandlerService
 	{
 		/// <summary>
 		///     Though it is better to write individual method GetDirectoryName and GetFileName instead of one method, but still
@@ -25,8 +25,8 @@ namespace FileHandler.Client
 				for (var pivot = length - 1; pivot >= rootLength; pivot--)
 					if (IsDirectorySeparator(path[pivot]))
 					{						
-						var endDirectorySeparatorBeforeIndex = EndDirectorySeparatorBeforeIndex(path, pivot);
-						directory = path.Substring(0, endDirectorySeparatorBeforeIndex);
+						var characterIndexBeforeEndDirectorySeperatorSetStarting = EndDirectorySeparatorBeforeIndex(path, pivot);
+						directory = path.Substring(0, characterIndexBeforeEndDirectorySeperatorSetStarting+1);
 						file = path.Substring(pivot + 1, length - pivot - 1);
 						return;
 					}
